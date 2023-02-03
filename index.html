@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Frontend Mentor | Expenses chart component</title>
+  </head>
+  <body>
+    <main class="card">
+      <section class="balance">
+        <div class="bal-text">
+          <p>My balance</p>
+          <p>$921.48</p>
+        </div>
+        <div><img src="./images/logo.svg" alt="logo" /></div>
+      </section>
+
+      <section class="chart">
+        <h1 class="title">Spending - Last 7 days</h1>
+        <div class="con">
+          <ul class="bars-con">
+            <li class="bars">
+              <div class="bar hover mon-bar"><p class="value">$17.45</p></div>
+              <p class="days">mon</p>
+            </li>
+            <li class="bars">
+              <div class="bar hover tue-bar"><p class="value">$34.91</p></div>
+              <p class="days">tue</p>
+            </li>
+            <li class="bars">
+              <div class="bar hover wed-bar active">
+                <p class="value">$52.36</p>
+              </div>
+              <p class="days">wed</p>
+            </li>
+            <li class="bars">
+              <div class="bar hover thur-bar"><p class="value">$31.07</p></div>
+              <p class="days">thu</p>
+            </li>
+            <li class="bars">
+              <div class="bar hover fri-bar"><p class="value">$23.39</p></div>
+              <p class="days">fri</p>
+            </li>
+            <li class="bars">
+              <div class="bar hover sat-bar"><p class="value">$43.28</p></div>
+              <p class="days">sat</p>
+            </li>
+            <li class="bars">
+              <div class="bar hover sun-bar"><p class="value">$25.48</p></div>
+              <p class="days">sun</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="month">
+          <p class="text">Total this month</p>
+          <div class="bot">
+            <p class="total">$478.33</p>
+            <div>
+              <p class="percent">+2.4%</p>
+              <p class="text">from last month</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a
+        class="links"
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        class="links"
+        href="https://www.frontendmentor.io/profile/CornHub-PorkHub"
+        target="_blank"
+        >JaBoL</a
+      >.
+    </footer>
+  </body>
+</html>

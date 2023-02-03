@@ -1,0 +1,218 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+
+/* GLOBAL VARIABLES */
+:root {
+  /* Primary Colors */
+  --custom-blue: hsl(228, 45%, 44%);
+  --soft-red: hsl(10, 79%, 65%);
+  --cyan: hsl(186, 34%, 60%);
+
+  /* Neutral Colors */
+  --dark-brown: hsl(25, 47%, 15%);
+  --medium-brown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --very-pale-orange: hsl(33, 100%, 98%);
+}
+
+/* CSS RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "DM Sans", sans-serif;
+  background-color: var(--cream);
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+li {
+  list-style: none;
+}
+
+/* COMPONENT */
+.bar {
+  background-color: var(--soft-red);
+  border-radius: 3px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.value {
+  position: absolute;
+  top: -2.5em;
+  background-color: var(--dark-brown);
+  color: white;
+  padding: 0.4rem;
+  border-radius: 0.3rem;
+  visibility: hidden;
+}
+
+.hover:hover {
+  background-color: hsl(10, 79%, 65%, 0.7);
+  cursor: pointer;
+}
+
+.hover:hover > * {
+  visibility: visible;
+}
+
+/* MAIN */
+.card {
+  width: 100%;
+  display: grid;
+  gap: 1em;
+  max-width: calc(450em / 16);
+}
+
+.balance {
+  display: flex;
+  justify-content: space-between;
+  background: var(--soft-red);
+  padding: 1em;
+  border-radius: 1rem;
+}
+
+.balance .bal-text {
+  color: var(--cream);
+}
+
+.balance .bal-text > *:last-child {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: var(--very-pale-orange);
+}
+
+.chart {
+  background-color: var(--very-pale-orange);
+  padding: 2em 1em;
+  border-radius: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: var(--dark-brown);
+}
+
+.con {
+  padding-bottom: 1.25rem;
+  border-bottom: 2px solid var(--cream);
+  margin-top: 1rem;
+}
+
+.bars-con {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  min-height: calc(200rem / 16);
+  gap: 0.75em;
+}
+
+.bars {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.5em;
+}
+
+.bars .days {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--medium-brown);
+}
+
+.bars .mon-bar {
+  min-height: 25%;
+}
+
+.bars .tue-bar {
+  min-height: 50%;
+}
+
+.bars .wed-bar {
+  min-height: 75%;
+}
+
+.bars .wed-bar.active {
+  background-color: var(--cyan);
+}
+
+.bars .wed-bar.active:hover {
+  background-color: hsl(186, 34%, 60%, 0.7);
+}
+
+.bars .thur-bar {
+  min-height: 45%;
+}
+
+.bars .fri-bar {
+  min-height: 35%;
+}
+
+.bars .sat-bar {
+  min-height: 60%;
+}
+
+.bars .sun-bar {
+  min-height: 40%;
+}
+
+.month {
+  margin-top: 1.5rem;
+}
+
+.month .text {
+  color: var(--medium-brown);
+}
+
+.bot {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.bot .total {
+  font-size: 2.2rem;
+  color: var(--dark-brown);
+  font-weight: 700;
+}
+
+.bot .percent {
+  text-align: right;
+  font-weight: 700;
+  color: var(--dark-brown);
+}
+
+/* FOOTER */
+.attribution {
+  font-size: calc(11rem / 16);
+  text-align: center;
+}
+
+.attribution .links {
+  color: var(--custom-blue);
+}
+
+@media (min-width: 400px) {
+  .balance {
+    padding: 1.5rem;
+  }
+
+  .chart {
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+}
